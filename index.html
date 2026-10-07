@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SG EMPIRE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                SG EMPIRE<span>SUPER STORE</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="cart-btn" onclick="openCart()">
+                🛒 Cart <span id="cart-count">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+
+            <p class="small-title">WELCOME TO</p>
+
+            <h1>
+                SG EMPIRE<br>
+                <span>STORE</span>
+            </h1>
+
+            <p>
+                Discover quality products at amazing prices.
+                Shop your favorites today.
+            </p>
+
+            <a href="#products" class="shop-btn">
+                SHOP NOW
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section id="products" class="products-section">
+
+        <h2>Our Products</h2>
+
+        <p class="section-description">
+            Check out our featured products.
+        </p>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+
+                <div class="product-image">👕</div>
+
+                <h3>Classic T-Shirt</h3>
+
+                <p class="price">₦15,000</p>
+
+                <button onclick="addToCart('Classic T-Shirt', 15000)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">👟</div>
+
+                <h3>Premium Sneakers</h3>
+
+                <p class="price">₦45,000</p>
+
+                <button onclick="addToCart('Premium Sneakers', 45000)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">⌚</div>
+
+                <h3>Luxury Watch</h3>
+
+                <p class="price">₦35,000</p>
+
+                <button onclick="addToCart('Luxury Watch', 35000)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">🎒</div>
+
+                <h3>Classic Backpack</h3>
+
+                <p class="price">₦25,000</p>
+
+                <button onclick="addToCart('Classic Backpack', 25000)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="about" class="about">
+
+        <h2>About SG EMPIRE</h2>
+
+        <p>
+            SG EMPIRE is an online shopping destination
+            providing quality products at affordable prices.
+        </p>
+
+    </section>
+
+
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>Have a question? Send us a message.</p>
+
+        <form>
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea placeholder="Your Message" required></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <div id="cart" class="cart">
+
+        <div class="cart-content">
+
+            <button class="close-cart" onclick="closeCart()">×</button>
+
+            <h2>Your Cart</h2>
+
+            <div id="cart-items"></div>
+
+            <div class="cart-total">
+                Total: ₦<span id="cart-total">0</span>
+            </div>
+
+            <button class="checkout-btn">
+                Checkout
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <h3>SG EMPIRE</h3>
+
+        <p>Quality products. Great prices.</p>
+
+        <p>© 2026 SG EMPIRE</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
